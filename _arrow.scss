@@ -1,0 +1,13 @@
+.arrow {
+  padding-bottom: 50px;
+  display: flex;
+  justify-content:center;
+  &-back {
+    margin-right: 15px;
+    font-size: 26px;
+  }
+  &-forward {
+    margin-left: 15px;
+    font-size: 26px;
+  }
+}

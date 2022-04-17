@@ -1,0 +1,121 @@
+
+//header
+.header {
+  padding-top: 43px;
+  display: flex;
+  align-items: center;
+  
+  &-auth {
+    margin-left: auto;
+  }
+  &-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  &-menu-link {
+    color: $gray-dark;
+    transition: all 0.25s linear;
+    padding: 10px 0;
+    &:hover {
+      color: $primary-color;
+      transform: translateY(-10px);
+    }
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .header {
+    &-menu  {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 90%;
+      max-width: 300px;
+      background-color: white;
+      display:block;
+      z-index: 9999;
+      bottom: 0;
+      border-left: 1px solid #eee; 
+      padding: 50px 15px;
+      transition: transform 0.25s linear;
+      transform: translateX(100%);
+      &-link {
+        display: block;
+        padding:20px;
+        border-radius: 10px;
+      }
+      &-icon {
+        font-size:20px;
+        margin-left: 20px; 
+        color:$pink;
+      } 
+      &-iclose {
+        float:right;
+        font-size:30px;
+        margin-right: 20px;
+        transform: translateY(-70%);
+        &:hover {
+          color:$primary-color;
+        }
+      }
+      &-item {
+        display:flex;
+        align-items: center;
+        &:hover {
+          color:white;
+          background-color:$primary-color;
+          border-radius: 20px;
+        }
+      }
+
+    }
+    &-auth {
+      margin-left: auto;
+    }
+  }
+  .header-menu.is-active {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-menu-item:not(:first-child) {
+    margin-left: 75px;
+  }
+  .header-menu-icon {
+    display: none;
+  }
+  .header-menu-iclose{
+    display: none;
+  }
+  .header-menu-imoble {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 1279px) {
+  .logo { 
+    margin-right: 0;
+  }
+  .header {
+    &-menu {
+      margin: 0 auto;
+    }
+  }
+  .logo { 
+      margin-right: 0;
+  }
+  
+}
+
+@media screen and (max-width: 767.98px) {
+  .header {
+    padding-top: 20px;
+  }
+  .header-logo-image {
+    max-width: 90px;
+  }
+}
+
